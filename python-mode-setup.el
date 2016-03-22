@@ -1,0 +1,5 @@
+(ensure-package-installed 'sphinx-doc)
+(require 'python)
+(add-hook 'python-mode-hook (lambda ()
+			      (require 'sphinx-doc)
+			      (sphinx-doc-mode t)))
