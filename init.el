@@ -31,9 +31,21 @@
 ;; auto-mode-alist setup
 (load-file "~/.emacs.d/auto-mode-alist-setup.el")
 
+;; keyboard setup
+(load-file "~/.emacs.d/keyboard-setup.el")
+
+;; markdown mode setup
+(load-file "~/.emacs.d/markdown-mode-setup.el")
+
 ;; Display mode
 (line-number-mode t)
 (column-number-mode t)
+
+;; Packages we want to be installed, but don't require a setup.el file
+(ensure-package-installed 'cmake-mode 'protobuf-mode)
+
+;; Finalise package installation
+(package-initialize)
 
 ;; OS Specific setup
 (when (memq window-system '(mac ns))
