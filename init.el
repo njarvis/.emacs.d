@@ -40,12 +40,18 @@
 ;; python mode setup
 (load-file "~/.emacs.d/python-mode-setup.el")
 
+;; protobuf mode setup
+(load-file "~/.emacs.d/protobuf-mode-setup.el")
+
+;; yaml setup
+(load-file "~/.emacs.d/yaml-mode-setup.el")
+
 ;; Display mode
 (line-number-mode t)
 (column-number-mode t)
 
 ;; Packages we want to be installed, but don't require a setup.el file
-(ensure-package-installed 'cmake-mode 'protobuf-mode 'sphinx-doc)
+(ensure-package-installed 'cmake-mode 'sphinx-doc)
 
 ;; Finalise package installation
 (package-initialize)
