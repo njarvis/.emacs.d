@@ -4,6 +4,9 @@
 ;; package setup
 (load-file "~/.emacs.d/package-setup.el")
 
+;; Packages we want to be installed, but don't require a setup.el file
+(ensure-package-installed 'cmake-mode 'sphinx-doc 'ws-butler)
+
 ;; backup setup
 (load-file "~/.emacs.d/backup-setup.el")
 
@@ -49,9 +52,6 @@
 ;; Display mode
 (line-number-mode t)
 (column-number-mode t)
-
-;; Packages we want to be installed, but don't require a setup.el file
-(ensure-package-installed 'cmake-mode 'sphinx-doc)
 
 ;; Finalise package installation
 (package-initialize)

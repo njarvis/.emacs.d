@@ -1,3 +1,4 @@
+
 (defconst senient-c-style
   '((c-basic-offset . 4)
     (c-auto-newline)
@@ -11,6 +12,10 @@
      (label . 0)
      (case-label . 0)))
   "Senient C Style for CC-MODE")
+
+(add-hook 'c-mode-common-hook (lambda ()
+				(require 'ws-butler)
+				(ws-butler-mode)))
 
 (add-hook 'c-mode-common-hook
           (lambda ()
