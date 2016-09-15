@@ -5,13 +5,16 @@
 (load-file "~/.emacs.d/package-setup.el")
 
 ;; Packages we want to be installed, but don't require a setup.el file
-(ensure-package-installed 'cmake-mode 'sphinx-doc 'ws-butler)
+(ensure-package-installed 'cmake-mode 'sphinx-doc 'ws-butler 'groovy-mode 'fill-column-indicator)
 
 ;; backup setup
 (load-file "~/.emacs.d/backup-setup.el")
 
 ;; c-mode setup
 (load-file "~/.emacs.d/c-mode-setup.el")
+
+;; java-mode setup
+(load-file "~/.emacs.d/java-mode-setup.el")
 
 ;; compile setup
 (load-file "~/.emacs.d/compile-setup.el")
@@ -48,6 +51,9 @@
 
 ;; yaml setup
 (load-file "~/.emacs.d/yaml-mode-setup.el")
+
+;; kite-setup
+;;(load-file "~/.emacs.d/kite.el")
 
 ;; Display mode
 (line-number-mode t)

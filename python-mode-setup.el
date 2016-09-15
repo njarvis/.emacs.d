@@ -5,5 +5,7 @@
 (add-hook 'python-mode-hook (lambda ()
 			      (require 'ws-butler)
 			      (ws-butler-mode)))
-
-
+(add-hook 'python-mode-hook (lambda ()
+			      (require 'fill-column-indicator)
+			      (fci-mode)
+			      (set-variable 'fci-rule-column 132)))
