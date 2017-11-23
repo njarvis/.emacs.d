@@ -1,4 +1,7 @@
+network-security.data
 cache
 backups
 elpa
 tramp
+[A-Z]*/
+

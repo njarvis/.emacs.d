@@ -8,4 +8,8 @@
 (add-hook 'python-mode-hook (lambda ()
 			      (require 'fill-column-indicator)
 			      (fci-mode)
-			      (set-variable 'fci-rule-column 132)))
+			      (set-variable 'fci-rule-column 85)))
+
+(cond ((equal company "arista")
+       (add-hook 'python-mode-hook 'arastra-indent-python-mode-hook)))
+
