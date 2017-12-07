@@ -39,7 +39,7 @@
 ;;(autoload 'dabbrev-expand "dabbrev" "Expand previous word \"dynamically\".")
 
 ;; Support for gnu id-utils
-;;(autoload 'gid "id-utils" "Lookup a string in a mkid database" t)
+(autoload 'gid "id-utils" "Lookup a string in a mkid database" t)
 
 ;; Support for coloring buffer regions
 (autoload 'colorize "colorize" "Supporting for coloring regions" t)
