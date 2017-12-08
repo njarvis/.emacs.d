@@ -1,6 +1,9 @@
 ;; Save the starting time...
 (defvar *init-start-time* (current-time))
 
+;; So we can drop libraries into the local .emacs.d directory
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
+
 ;; package setup
 (load-file "~/.emacs.d/package-setup.el")
 

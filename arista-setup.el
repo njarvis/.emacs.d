@@ -48,7 +48,9 @@
 (load-library "misc-bindings")
 
 ;; Arista gid extensions
-(load-library "a4-gid")
+(if (locate-library "a4-gid2")
+    (load-library "a4-gid2")
+  (load-library "a4-gid"))
 
 ;; Have gnuclient always use the same frame if not running in X
 ;; emacsclient does this by default.
