@@ -3,5 +3,7 @@ cache
 backups
 elpa
 tramp
+auto-save-list
+ido.last
 [A-Z]*/
 

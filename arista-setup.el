@@ -75,3 +75,13 @@
     (setq gofmt-command "goimports"))
 (add-hook 'before-save-hook 'gofmt-before-save)
 
+;; When editing submit notes, automatically jump to the description
+(define-derived-mode arastra-p4-submit-mode text-mode "P4"
+  "A mode for setting up with-editor-minor mode and the point when editing a p4 submit description"
+;  (with-editor-mode)
+  (beginning-of-buffer)
+  (search-forward "<enter description here>")
+  (search-backward "<")
+  (kill-line)
+  )
+(add-to-list 'magic-mode-alist '("# A Perforce Change Specification" . arastra-p4-submit-mode))
