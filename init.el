@@ -8,7 +8,7 @@
 (load-file "~/.emacs.d/package-setup.el")
 
 ;; Packages we want to be installed, but don't require a setup.el file
-(ensure-package-installed 'cmake-mode 'sphinx-doc 'ws-butler 'groovy-mode 'fill-column-indicator 'exec-path-from-shell)
+(ensure-package-installed 'cmake-mode 'sphinx-doc 'ws-butler 'groovy-mode 'fill-column-indicator 'exec-path-from-shell 'vlf)
 
 ;; Company specific setup
 (setq company "arista")
