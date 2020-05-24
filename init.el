@@ -4,6 +4,8 @@
 ;; So we can drop libraries into the local .emacs.d directory
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
+(require 'compile+)
+
 ;; package setup
 (load-file "~/.emacs.d/package-setup.el")
 
@@ -63,9 +65,16 @@
 ;; yaml setup
 (load-file "~/.emacs.d/yaml-mode-setup.el")
 
+;; Enable loading URL
+(url-handler-mode 1)
+
+;; helm setup
+;; https://github.com/emacs-helm/helm/wiki
+(load-file "~/.emacs.d/helm-setup.el")
+
 ;; ido setup
 ;; https://www.emacswiki.org/emacs/InteractivelyDoThings
-(load-file "~/.emacs.d/ido-setup.el")
+;;(load-file "~/.emacs.d/ido-setup.el")
 
 ;; kite-setup
 ;;(load-file "~/.emacs.d/kite.el")
@@ -102,7 +111,7 @@
  '(indent-tabs-mode nil)
  '(package-selected-packages
    (quote
-    (vlf exec-path-from-shell yaml-mode ws-butler sphinx-doc protobuf-mode markdown-mode groovy-mode fill-column-indicator cmake-mode))))
+    (helm vlf exec-path-from-shell yaml-mode ws-butler sphinx-doc protobuf-mode markdown-mode groovy-mode fill-column-indicator cmake-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
