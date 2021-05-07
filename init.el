@@ -10,7 +10,7 @@
 (load-file "~/.emacs.d/package-setup.el")
 
 ;; Packages we want to be installed, but don't require a setup.el file
-(ensure-package-installed 'cmake-mode 'sphinx-doc 'ws-butler 'groovy-mode 'fill-column-indicator 'exec-path-from-shell 'vlf)
+(ensure-package-installed 'cmake-mode 'sphinx-doc 'ws-butler 'groovy-mode 'fill-column-indicator 'exec-path-from-shell 'vlf 'rg)
 
 ;; Company specific setup
 (setq company "arista")
@@ -34,6 +34,9 @@
 
 ;; gid setup
 (load-file "~/.emacs.d/gid-setup.el")
+
+;; ripgrep setup
+(load-file "~/.emacs.d/rg-setup.el")
 
 ;; recentf setup
 (load-file "~/.emacs.d/recentf-setup.el")
@@ -109,9 +112,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(indent-tabs-mode nil)
+ '(js-indent-level 3)
  '(package-selected-packages
-   (quote
-    (helm vlf exec-path-from-shell yaml-mode ws-butler sphinx-doc protobuf-mode markdown-mode groovy-mode fill-column-indicator cmake-mode))))
+   '(wgrep rg helm vlf exec-path-from-shell yaml-mode ws-butler sphinx-doc protobuf-mode markdown-mode groovy-mode fill-column-indicator cmake-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -18,6 +18,7 @@
 		   (message "Senient c-mode")
 		   (c-add-style "Senient" senient-c-style))
 		  ((equal company "arista")
+                   (setq fill-column 85)
 		   (arastra-c-mode-common-hook)))))
 
 (add-hook 'c-mode-hook
