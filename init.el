@@ -89,7 +89,8 @@
 (column-number-mode t)
 
 ;; Finalise package installation
-(package-initialize)
+(when (< emacs-major-version 27)
+  (package-initialize))
 
 ;; OS Specific setup
 (when (memq window-system '(mac ns))

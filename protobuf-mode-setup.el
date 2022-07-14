@@ -1,4 +1,5 @@
 (ensure-package-installed 'protobuf-mode)
-(require 'cl)
+(when (< emacs-major-version 27)
+  (require 'cl))
 (require 'protobuf-mode)
 
